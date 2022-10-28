@@ -1,5 +1,7 @@
 package com.damascena.sw.apistarwars.domains;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,8 +20,12 @@ public class Planet {
     public Planet() {
     }
 
-    public Planet(Long id, String name, String climate, String terrain) {
-        this.id = id;
+    public Planet(String climate, String terrain) {
+        this.climate = climate;
+        this.terrain = terrain;
+    }
+
+    public Planet(String name, String climate, String terrain) {
         this.name = name;
         this.climate = climate;
         this.terrain = terrain;
@@ -39,5 +45,10 @@ public class Planet {
 
     public String getTerrain() {
         return terrain;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return EqualsBuilder.reflectionEquals(obj, this);
     }
 }

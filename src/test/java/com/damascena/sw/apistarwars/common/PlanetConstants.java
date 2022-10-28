@@ -1,2 +1,8 @@
-package com.damascena.sw.apistarwars.common;public class PlanetConstants {
+package com.damascena.sw.apistarwars.common;
+
+import com.damascena.sw.apistarwars.domains.Planet;
+
+public class PlanetConstants {
+    public static final Planet PLANET = new Planet("name", "climate", "terrain");
+    public static final Planet INVALID_PLANET = new Planet("", "", "");
 }
