@@ -15,7 +15,7 @@ import static com.damascena.sw.apistarwars.common.PlanetConstants.PLANET;
 import static com.damascena.sw.apistarwars.common.PlanetConstants.TATOOINE;
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ActiveProfiles("IT")
+@ActiveProfiles("it")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Sql(scripts = "/import_planets.sql", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
 @Sql(scripts = "/remove_planets.sql", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
